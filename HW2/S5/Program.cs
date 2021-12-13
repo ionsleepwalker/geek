@@ -11,27 +11,27 @@ if(imt >= 18.5 && imt <= 25){
     Console.WriteLine($"Вы в отличном состоянии! Ваш индекс массы равен: {imt:F2}");
 } else if(imt < 18.5 && imt > 16){
     double needs = 18.5;
-    needs -= imt;
-    Console.WriteLine($"У Вас недостаточная масса тела! Ваш индекс массы равен: {imt:F2}\nДля нормализации веса Вам необходимо сбросить: {needs:F2}кг");
+    needs = (needs - imt)*(Math.Pow(height,2));
+    Console.WriteLine($"У Вас недостаточная масса тела! Ваш индекс массы равен: {imt:F2}\nДля нормализации веса Вам необходимо набрать: {needs:F2}кг");
 } else if (imt < 16) {
     double needs = 18.5;
-    needs -= imt;
-    Console.WriteLine($"Выраженный дефицит массы тела! Ваш индекс массы равен: {imt:F2}\nДля нормализации веса Вам необходимо сбросить: {needs:F2}кг");
+    needs = (needs - imt)*(Math.Pow(height,2));
+    Console.WriteLine($"Выраженный дефицит массы тела! Ваш индекс массы равен: {imt:F2}\nДля нормализации веса Вам необходимо набрать: {needs:F2}кг");
 } else if (imt > 25 && imt < 30) {
     double needs = 25;
-    needs = imt - needs;
+    needs = (imt - needs)*(Math.Pow(height,2));
     Console.WriteLine($"Избыточная масса тела! Ваш индекс массы равен: {imt:F2}\nДля нормализации веса Вам необходимо сбросить: {needs:F2}кг");
 } else if (imt > 30 && imt < 35) {
     double needs = 25;
-    needs = imt - needs;
+    needs = (imt - needs)*(Math.Pow(height,2));
     Console.WriteLine($"Ожирение 1-й степени! Ваш индекс массы равен: {imt:F2}\nДля нормализации веса Вам необходимо сбросить: {needs:F2}кг");
 } else if (imt > 35  && imt < 40) {
     double needs = 25;
-    needs = imt - needs;
+    needs = (imt - needs)*(Math.Pow(height,2));
     Console.WriteLine($"Ожирение 2-й степени! Ваш индекс массы равен: {imt:F2}\nДля нормализации веса Вам необходимо сбросить: {needs:F2}кг");
 }
 else if (imt > 40) {
     double needs = 25;
-    needs = imt - needs;
+    needs = (imt - needs)*(Math.Pow(height,2));
     Console.WriteLine($"Ожирение 3-й степени! Ваш индекс массы равен: {imt:F2}\nДля нормализации веса Вам необходимо сбросить: {needs:F2}кг");
 }
